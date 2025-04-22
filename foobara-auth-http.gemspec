@@ -6,9 +6,9 @@ Gem::Specification.new do |spec|
   spec.authors = ["Miles Georgi"]
   spec.email = ["azimux@gmail.com"]
 
-  spec.summary = "No description. Add one."
+  spec.summary = "Contains convenience classes/methods for using Foobara::Auth over HTTP"
   spec.homepage = "https://github.com/foobara/auth-http"
-  spec.license = "None specified yet"
+  spec.license = "Apache-2.0 OR MIT"
   spec.required_ruby_version = Foobara::AuthHttp::MINIMUM_RUBY_VERSION
 
   spec.metadata["homepage_uri"] = spec.homepage

@@ -1,0 +1,8 @@
+This project is dual licensed under your choice of the Apache-2.0 license and the MIT license.
+
+  Apache-2.0 License: LICENSE-APACHE-2.0.txt or https://www.apache.org/licenses/LICENSE-2.0.txt
+  MIT License: LICENSE-MIT.txt or https://opensource.org/licenses/MIT
+
+This is equivalent to the following SPDX License Expression: Apache-2.0 OR MIT
+
+Copyright (c) 2025 Miles Georgi
