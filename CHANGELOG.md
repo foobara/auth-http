@@ -1,4 +1,8 @@
-## [0.0.1]
+## [0.0.2] - 2025-04-22
+
+- Add several helpful request/response mutators
+
+## [0.0.1]- 2025-04-22
 
 - Initial release
 

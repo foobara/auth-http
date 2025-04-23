@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-auth-http (0.0.1)
+    foobara-auth-http (0.0.2)
       foobara (~> 0.0.108)
       foobara-auth (~> 0.0.1)
       foobara-http-command-connector (~> 0.0.1)
@@ -53,7 +53,7 @@ GEM
       foobara-type-generator (~> 0.0.1)
       foobara-typescript-react-command-form-generator (~> 0.0.1)
       foobara-typescript-remote-command-generator (~> 0.0.1)
-    foobara (0.0.108)
+    foobara (0.0.109)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (~> 0.0.11)
@@ -82,7 +82,7 @@ GEM
       foobara-files-generator
     foobara-files-generator (0.0.5)
       foobara
-    foobara-http-command-connector (0.0.22)
+    foobara-http-command-connector (0.0.23)
       foobara (~> 0.0.88)
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
