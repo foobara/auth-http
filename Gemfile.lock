@@ -73,7 +73,7 @@ GEM
       foobara-files-generator
     foobara-dotenv-loader (0.0.3)
       dotenv
-    foobara-empty-ruby-project-generator (0.0.17)
+    foobara-empty-ruby-project-generator (0.0.18)
       extract-repo (~> 0.0.1)
       foobara (~> 0.0.94)
       foobara-files-generator (~> 0.0.1)
@@ -110,7 +110,7 @@ GEM
     foobara-rubocop-rules (0.0.8)
       rubocop
       rubocop-rspec
-    foobara-sh-cli-connector (0.0.15)
+    foobara-sh-cli-connector (0.0.16)
       foobara (~> 0.0.88)
     foobara-sh-cli-connector-generator (0.0.4)
       foobara-files-generator (~> 0.0.1)
