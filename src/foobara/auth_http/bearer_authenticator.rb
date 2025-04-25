@@ -1,12 +1,27 @@
 module Foobara
   module AuthHttp
     class BearerAuthenticator < CommandConnector::Authenticator
+      class << self
+        def load_user(&block)
+          new(load_user: block)
+        end
+      end
+
+      def initialize(load_user: nil, **)
+        @load_user = load_user || ->(user_id) { Auth::FindUser.run!(id: user_id) }
+        super(**)
+      end
+
       def symbol
         :bearer
       end
 
       def explanation
         @explanation ||= "Expects an access token in authorization header in format of: Bearer <token>"
+      end
+
+      def authenticate(request)
+        request.instance_exec(&to_proc)
       end
 
       def block
@@ -41,7 +56,9 @@ module Foobara
       end
 
       def load_user_record(user_id)
-        Auth::FindUser.run!(id: user_id)
+        if user_id
+          @load_user.call(user_id)
+        end
       end
     end
   end

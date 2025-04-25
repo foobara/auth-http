@@ -1,3 +1,7 @@
+## [0.0.3] - 2025-04-25
+
+- Add BearerToken.load_user
+
 ## [0.0.2] - 2025-04-22
 
 - Add several helpful request/response mutators

@@ -7,6 +7,13 @@ RSpec.describe Foobara::AuthHttp::BearerAuthenticator do
 
   let(:authenticator) { described_class.new }
 
+  let(:user) do
+    Foobara::Auth::Register.run!(username: "Barbara", email: "barbara@example.com", plaintext_password: "1234")
+  end
+  let(:access_token) do
+    Foobara::Auth::Login.run!(email: user.email, plaintext_password: "1234")[:access_token]
+  end
+
   it "has a symbol and explanation" do
     expect(authenticator.symbol).to eq(:bearer)
     expect(authenticator.explanation).to match(/bearer/i)
@@ -24,12 +31,6 @@ RSpec.describe Foobara::AuthHttp::BearerAuthenticator do
           "Hello, World!"
         end
       end
-    end
-    let(:user) do
-      Foobara::Auth::Register.run!(username: "Barbara", email: "barbara@example.com", plaintext_password: "1234")
-    end
-    let(:access_token) do
-      Foobara::Auth::Login.run!(email: user.email, plaintext_password: "1234")[:access_token]
     end
 
     let(:path) { "/run/HelloWorld" }
@@ -71,6 +72,31 @@ RSpec.describe Foobara::AuthHttp::BearerAuthenticator do
         # TODO: add more convenience methods for accessing this stuff?
         expect(response.request.outcome.errors_hash.keys).to eq(["runtime.unauthenticated"])
       end
+    end
+  end
+
+  describe ".load_user" do
+    let(:authenticator) do
+      user = some_user_object
+
+      described_class.load_user do |_user_id|
+        user
+      end
+    end
+    let(:some_user_object) { Object.new }
+
+    let(:request) do
+      Foobara::CommandConnectors::Http::Request.new(
+        path: "/whatever",
+        headers: { "authorization" => "Bearer #{access_token}" }
+      )
+    end
+    let(:loaded_user) do
+      authenticator.authenticate(request)
+    end
+
+    it "can load a custom user object" do
+      expect(loaded_user).to eq(some_user_object)
     end
   end
 end
