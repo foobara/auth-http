@@ -11,8 +11,8 @@ module Foobara
       def initialize(attribute_name = :access_token, header_name = "X-Access-Token")
         super()
 
-        self.attribute_name = attribute_name
-        self.header_name = header_name
+        self.attribute_name = attribute_name.to_sym
+        self.header_name = header_name.to_s
       end
     end
   end

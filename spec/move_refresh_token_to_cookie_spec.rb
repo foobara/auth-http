@@ -24,7 +24,7 @@ RSpec.describe Foobara::AuthHttp::MoveRefreshTokenToCookie do
 
     cookie = response.cookies.first
 
-    expect(cookie.name).to eq(:refresh_token)
+    expect(cookie.name).to eq("refresh_token")
     expect(cookie.value).to eq("abc123")
     expect(response.body).to eq(foo: "bar")
   end

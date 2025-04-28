@@ -1,3 +1,7 @@
+## [0.0.4] - 2025-04-28
+
+- Fix bug preventing refresh_token cookie from being detected
+
 ## [0.0.3] - 2025-04-25
 
 - Add BearerToken.load_user

@@ -11,8 +11,8 @@ module Foobara
       def initialize(attribute_name = :refresh_token, cookie_name = attribute_name, **cookie_opts)
         super()
 
-        self.attribute_name = attribute_name
-        self.cookie_name = cookie_name
+        self.attribute_name = attribute_name.to_sym
+        self.cookie_name = cookie_name.to_s
         self.cookie_opts = {
           httponly: true,
           path: "/run/Foobara/Auth/",
