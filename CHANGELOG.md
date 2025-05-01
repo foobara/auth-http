@@ -1,3 +1,7 @@
+## [0.0.5] - 2025-05-01
+
+- Add an ApiKeyAuthenticator
+
 ## [0.0.4] - 2025-04-28
 
 - Fix bug preventing refresh_token cookie from being detected

@@ -9,19 +9,13 @@ module Foobara
 
       def initialize(load_user: nil, **)
         @load_user = load_user || ->(user_id) { Auth::FindUser.run!(id: user_id) }
-        super(**)
+        super(symbol: :bearer,
+              explanation: "Expects an access token in authorization header in format of: Bearer <token>",
+              **)
       end
 
-      def symbol
-        :bearer
-      end
-
-      def explanation
-        @explanation ||= "Expects an access token in authorization header in format of: Bearer <token>"
-      end
-
-      def authenticate(request)
-        request.instance_exec(&to_proc)
+      def applicable?(request)
+        request.headers.key?("authorization")
       end
 
       def block
