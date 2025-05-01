@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-auth-http (0.0.5)
+    foobara-auth-http (0.0.6)
       foobara (~> 0.0.108)
       foobara-auth (~> 0.0.1)
       foobara-http-command-connector (~> 0.0.1)
@@ -82,7 +82,7 @@ GEM
       foobara-files-generator
     foobara-files-generator (0.0.5)
       foobara
-    foobara-http-command-connector (0.0.24)
+    foobara-http-command-connector (0.0.25)
       foobara (~> 0.0.88)
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara

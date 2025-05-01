@@ -1,3 +1,7 @@
+## [0.0.6] - 2025-05-01
+
+- Add SetUserToAuthenticatedUser request mutator
+
 ## [0.0.5] - 2025-05-01
 
 - Add an ApiKeyAuthenticator
