@@ -2,12 +2,14 @@ module Foobara
   module AuthHttp
     class ApiKeyAuthenticator < CommandConnector::Authenticator
       class << self
-        def load_user(&block)
-          new(load_user: block)
+        def load_user(**, &block)
+          new(**, load_user: block)
         end
       end
 
-      def initialize(load_user: nil, **)
+      def initialize(load_user: nil, relevant_entity_classes: Auth::Types::User, **)
+        @relevant_entity_classes = relevant_entity_classes
+
         if load_user
           @load_user = load_user
         end
@@ -42,6 +44,12 @@ module Foobara
               [user, credential]
             end
           end
+        end
+      end
+
+      def relevant_entity_classes(request)
+        if applicable?(request)
+          @relevant_entity_classes
         end
       end
     end

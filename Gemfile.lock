@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    foobara-auth-http (0.0.6)
-      foobara (~> 0.0.108)
+    foobara-auth-http (0.0.7)
+      foobara (~> 0.0.116)
       foobara-auth (~> 0.0.1)
       foobara-http-command-connector (~> 0.0.1)
 
@@ -33,8 +33,8 @@ GEM
     ffi-compiler (1.3.2)
       ffi (>= 1.15.5)
       rake
-    foob (0.0.13)
-      foobara (~> 0.0.99)
+    foob (0.0.14)
+      foobara (~> 0.0.116)
       foobara-command-generator (~> 0.0.1)
       foobara-domain-generator (~> 0.0.1)
       foobara-domain-mapper-generator (~> 0.0.1)
@@ -53,7 +53,7 @@ GEM
       foobara-type-generator (~> 0.0.1)
       foobara-typescript-react-command-form-generator (~> 0.0.1)
       foobara-typescript-remote-command-generator (~> 0.0.1)
-    foobara (0.0.115)
+    foobara (0.0.116)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (~> 0.0.11)
@@ -82,8 +82,8 @@ GEM
       foobara-files-generator
     foobara-files-generator (0.0.5)
       foobara
-    foobara-http-command-connector (0.0.25)
-      foobara (~> 0.0.88)
+    foobara-http-command-connector (0.0.26)
+      foobara (~> 0.0.116)
     foobara-local-files-crud-driver-generator (0.0.3)
       foobara
       foobara-files-generator
@@ -110,7 +110,7 @@ GEM
     foobara-rubocop-rules (0.0.8)
       rubocop
       rubocop-rspec
-    foobara-sh-cli-connector (0.0.16)
+    foobara-sh-cli-connector (0.0.17)
       foobara (~> 0.0.88)
     foobara-sh-cli-connector-generator (0.0.4)
       foobara-files-generator (~> 0.0.1)

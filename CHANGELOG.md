@@ -1,3 +1,7 @@
+## [0.0.7] - 2025-05-03
+
+- Expose relevant entity classes from authenticators for better transaction automation
+
 ## [0.0.6] - 2025-05-01
 
 - Add SetUserToAuthenticatedUser request mutator

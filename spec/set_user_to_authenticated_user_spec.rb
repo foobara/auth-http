@@ -1,12 +1,9 @@
 RSpec.describe Foobara::AuthHttp::SetUserToAuthenticatedUser do
-  let(:command) do
-    instance_double(Foobara::TransformedCommand, authenticated_user:)
-  end
   let(:authenticated_user) { Object.new }
   let(:request) do
     Foobara::CommandConnectors::Http::Request.new(
       path: "/whatever"
-    ).tap { |r| r.command = command }
+    ).tap { |r| r.authenticated_user = authenticated_user }
   end
 
   let(:mutator) { described_class.new }

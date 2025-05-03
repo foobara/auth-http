@@ -10,7 +10,7 @@ module Foobara
 
       def initialize
         self.attribute_name = :user
-        self.input_value_proc = proc { command.authenticated_user }
+        self.input_value_proc = proc { authenticated_user }
 
         super
       end
