@@ -16,4 +16,4 @@ module Foobara
 end
 
 Foobara::Util.require_directory "#{__dir__}/../../src"
-Foobara::Monorepo.project "auth_http", project_path: "#{__dir__}/../../"
+Foobara.project "auth_http", project_path: "#{__dir__}/../../"
