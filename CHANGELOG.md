@@ -1,3 +1,7 @@
+## [0.1.0] - 2025-08-22
+
+- Mark as compatible with Foobara 0.1.0
+
 ## [0.0.7] - 2025-05-03
 
 - Expose relevant entity classes from authenticators for better transaction automation

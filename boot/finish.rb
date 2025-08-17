@@ -2,9 +2,9 @@ first = [
   "remote.rb"
 ]
 
-last = %w[
-  async.rb
-  cron.rb
+last = [
+  "async.rb",
+  "cron.rb"
 ]
 
 skip = ["start.rb", "finish.rb", *first, *last]
