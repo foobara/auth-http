@@ -14,10 +14,10 @@ RSpec.describe Foobara::AuthHttp::MoveAccessTokenToHeader do
 
   let(:mutator) { described_class.new }
 
-  it "sets the X-Access-Token header and removes it from the response body" do
+  it "sets the x-access-token header and removes it from the response body" do
     mutator.mutate(response)
 
-    expect(response.headers["X-Access-Token"]).to eq("abc123")
+    expect(response.headers["x-access-token"]).to eq("abc123")
     expect(response.body).to eq(foo: "bar")
   end
 end

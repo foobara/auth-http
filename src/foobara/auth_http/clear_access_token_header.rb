@@ -8,7 +8,7 @@ module Foobara
         end
       end
 
-      def initialize(header_name = "X-Access-Token", header_value = nil)
+      def initialize(header_name = "x-access-token", header_value = nil)
         super()
 
         self.header_name = header_name.to_s

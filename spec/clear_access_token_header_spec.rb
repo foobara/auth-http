@@ -5,15 +5,15 @@ RSpec.describe Foobara::AuthHttp::ClearAccessTokenHeader do
   let(:response) do
     Foobara::CommandConnectors::Http::Response.new(
       request:,
-      headers: { "X-Access-Token" => "foo" }
+      headers: { "x-access-token" => "foo" }
     )
   end
 
   let(:mutator) { described_class.new }
 
-  it "sets the X-Access-Token header to nil" do
+  it "sets the x-access-token header to nil" do
     expect {
       mutator.mutate(response)
-    }.to change(response, :headers).from("X-Access-Token" => "foo").to("X-Access-Token" => nil)
+    }.to change(response, :headers).from("x-access-token" => "foo").to("x-access-token" => nil)
   end
 end

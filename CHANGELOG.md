@@ -1,3 +1,7 @@
+## [0.1.1] - 2026-01-27
+
+- Use lower-case header keys to appease Rack::Lint
+
 ## [0.1.0] - 2025-08-22
 
 - Mark as compatible with Foobara 0.1.0

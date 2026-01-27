@@ -75,13 +75,13 @@ A rundown of everything happening here:
 * We are declaring that we want to authenticate using bearer tokens. These are JWT tokens in an
   `Authorization: Bearer <token>` header.
 * We are declaring that when we login or refresh our login, we would like to move the new access token
-  from the result to an X-Access-Token header, and we would like
+  from the result to an x-access-token header, and we would like
   to move the new refresh token from the result to a secure http only cookie.
 * We are declaring that when we want to refresh our login, we want to move the refresh token from the
   headers to an input to RefreshLogin.
 * Logout could technically be handled by the client but for convenience/added safety, we expose
   Logout and move the refresh token to its inputs so that it can invalidate the refresh token.
-* When we respond from Logout, we set the X-Access-Token header to nil. This is something the client
+* When we respond from Logout, we set the x-access-token header to nil. This is something the client
   could do but gives an easy way to clobber the client's access token without effort on their end.
 
 We also expose a few app commands using our authenticator. This is configured as part of command connectors not

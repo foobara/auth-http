@@ -1,5 +1,6 @@
 module Foobara
   module AuthHttp
+    # Is this genuinely a generic enough concept to be a class in this project?
     class SetUserToAuthenticatedUser < Foobara::CommandConnectors::Http::SetInputToProcResult
       # TODO: move this into base class as default?
       class << self
