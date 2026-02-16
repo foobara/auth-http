@@ -1,3 +1,7 @@
+## [0.1.2] - 2026-02-16
+
+- Add a :logs_out desugarizer
+
 ## [0.1.1] - 2026-01-27
 
 - Use lower-case header keys to appease Rack::Lint

@@ -8,8 +8,9 @@ module Foobara
 
     class << self
       def install!
-        CommandConnectors::Http.register_authenticator(BearerAuthenticator)
-        CommandConnectors::Http.register_authenticator(ApiKeyAuthenticator)
+        CommandConnectors::Http.register_authenticator BearerAuthenticator
+        CommandConnectors::Http.register_authenticator ApiKeyAuthenticator
+        CommandConnectors::Http.add_desugarizer Desugarizers::LogsOut
       end
     end
   end
